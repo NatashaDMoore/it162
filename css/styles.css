@@ -7,12 +7,14 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-html {
+html, body {
     background-color: rgb(213, 212, 212);
+    min-height: 100vh;
+
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 #wrapper {
@@ -210,30 +212,30 @@ main p {
 
     .topnav a:not(:first-child), .dropdown .dropbtn {
         display: none;
-      }
+    }
       .topnav a.icon {
         float: right;
         display: block;
-      }
+    }
 
       .topnav.responsive {position: relative;}
       .topnav.responsive a.icon {
         position: absolute;
         right: 0;
         top: 0;
-      }
+    }
       .topnav.responsive a {
         float: none;
         display: block;
         text-align: left;
-      }
+    }
       .topnav.responsive .dropdown {float: none;}
       .topnav.responsive .dropdown-content {position: relative;}
       .topnav.responsive .dropdown .dropbtn {
         display: block;
         width: 100%;
         text-align: left;
-      }
+    }
     
     img.headshot {
         border-radius: 1000px;
@@ -255,6 +257,7 @@ main p {
     }
 
     h1 {
+        font-size: 2em;
         margin: 20px;
     }
 
