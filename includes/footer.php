@@ -1,17 +1,11 @@
 <footer>
-        <ul class="desktop">
-            <li>Copyright &copy; 2022</li>
-            <li>All Rights Reserved</li>
-            <li><a href="../index.php">Web Design by Natasha Moore</a></li>
-            <li><a id="html-checker" href="#">HTML Validation</a></li>
-            <li><a id="css-checker" href="#">CSS Validation</a></li>
-        </ul>
-
         <ul class="mobile">
             <li>Copyright &copy; 2022</li>
             <li>All Rights Reserved</li>
         </ul>
-        <ul class="mobile">
+        <ul>
+            <li class="desktop">Copyright &copy; 2022</li>
+            <li class="desktop">All Rights Reserved</li>
             <li><a href="../index.php">Web Design by Natasha Moore</a></li>
             <li><a id="html-checker" href="#">HTML Validation</a></li>
             <li><a id="css-checker" href="#">CSS Validation</a></li>
