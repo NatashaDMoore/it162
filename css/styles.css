@@ -7,14 +7,28 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body {
+html {
     background-color: rgb(213, 212, 212);
 }
+
+body {
+    min-height: 100vh;
+}
+
+#wrapper {
+    min-height: 100%;
+    padding: 20px;
+}
+
+#wrapper:after {
+    content: "";
+    display: block;
+  }
 
 /* Navigation */
 
 .topnav {
-    background-color: rgb(47, 79, 79);
+    background-color: black;
     overflow: hidden;
   }
   
@@ -29,7 +43,7 @@ body {
   }
   
   .current {
-    background-color: #04AA6D;
+    background-color: rgb(47, 79, 79);
     color: white;
   }
 
@@ -45,14 +59,15 @@ body {
 /* Footer */
 
 footer {
-    position: absolute;
+    background: black;
+    position: relative;
+    left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
-    margin: 0 auto;
-    /* height: 50px; */
-    line-height: 50px;
-    background-color: rgb(213, 212, 212);
-    clear: both;
+    min-height: 100px;
+    text-align: center;
+    padding: 10px;
+    color: white;
 }
 
 footer ul {
@@ -111,6 +126,8 @@ main p {
     font-size: 1.05em;
 }
 
+
+
 /* Responsive Styles */
 
 /* Desktop */
@@ -118,11 +135,6 @@ main p {
 
     .mobile {
         display: none;
-    }
-
-    #wrapper {
-        max-width: 1200px;
-        margin: 20px auto;
     }
 
     main {
@@ -145,6 +157,11 @@ main p {
         overflow: auto;
         width:900px;
     }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
 }
 
 /* Tablet */
@@ -153,11 +170,6 @@ main p {
 
     .mobile {
         display: none;
-    }
-
-    #wrapper {
-        max-width: 1200px;
-        margin: 20px auto;
     }
 
     main {
@@ -178,14 +190,6 @@ main p {
 
     main h2 {
         text-align: center;
-    }
-
-    nav {
-        margin: 0 auto;
-    }
-
-    nav a {
-        font-size: 1.1em; 
     }
 
     footer li {
@@ -231,7 +235,6 @@ main p {
         text-align: left;
       }
     
-
     img.headshot {
         border-radius: 1000px;
         display: block;
@@ -239,20 +242,9 @@ main p {
         margin: 0 auto;
     }
 
-    #wrapper {
-        max-width: 1200px;
-        margin: 20px 20px;
-    }
-
     main {
         width: 100%;
         margin: 20px auto 0 auto;
-    }
-
-    footer {
-        line-height: 20px;
-        position: relative;
-        display: block;
     }
 
     footer li {
