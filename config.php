@@ -38,34 +38,34 @@ switch (THIS_PAGE) {
     $body = 'contact inner';
     break;
 
-    // case '.php';
-    // $title = '';
-    // $body = ' inner';
-    // break;
+    case '.php';
+    $title = '';
+    $body = ' inner';
+    break;
 
-    // case '.php';
-    // $title = '';
-    // $body = ' inner';
-    // break;
+    case '.php';
+    $title = '';
+    $body = ' inner';
+    break;
 }
 
 // Navigation
 $nav = array(
     'index.php' => 'Home',
-    'big.php' => 'BIG',
+    'big/index.php' => 'BIG',
     'aia.php' => 'AIA',
     'flowchart.php' => 'Flowchart',
-    'final.php' => 'Final Project',
-    'contact.php' => 'Contact'
+    'fp/index.php' => 'Final Project',
+    'contactme.php' => 'Contact'
 );
 
 function make_links($nav) {
     $my_return = '';
     foreach($nav as $key => $value) {
     if(THIS_PAGE == $key) {
-        $my_return .= '<li><a style="font-size: 1.4em; color:mediumseagreen;" class="current" href=" '.$key.' "> '.$value.' </a></li>';
+        $my_return .= '<a class="current" href=" '.$key.' "> '.$value.' </a>';
     } else {
-        $my_return .= '<li><a style="font-size: 1.4em; color:white;" href=" '.$key.' "> '.$value.' </a></li>';
+        $my_return .= '<a href=" '.$key.' "> '.$value.' </a>';
     }
 
     } // end foreach
