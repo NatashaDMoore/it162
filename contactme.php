@@ -15,8 +15,8 @@ include("./includes/header.php")
         $toName = "Natasha Moore"; //place your client's name here
         $website = "natashadmoore.com";  //place NAME of your client's website
 
-        //echo loadContact('simple.php');
-        echo loadContact('multiple.php');
+        echo loadContact('simple.php');
+        // echo loadContact('multiple.php');
 
     ?>
 
