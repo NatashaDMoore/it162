@@ -10,7 +10,6 @@
 html, body {
     background-color: rgb(213, 212, 212);
     min-height: 100vh;
-
 }
 
 body {
@@ -161,7 +160,7 @@ main p {
     }
 
     footer {
-        position: fixed;
+        position: relative;
         bottom: 0;
     }
 }

@@ -33,7 +33,7 @@ switch (THIS_PAGE) {
     $body = 'final inner';
     break;
 
-    case 'contact.php';
+    case 'contactme.php';
     $title = 'Contact Natasha';
     $body = 'contact inner';
     break;
