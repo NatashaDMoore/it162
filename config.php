@@ -3,6 +3,8 @@
 // ob_start function ensures the entire page is read to eliminate header errors
 ob_start();
 
+date_default_timezone_set('America/Los_Angeles');
+
 // Constant
 define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
 
@@ -11,41 +13,49 @@ switch (THIS_PAGE) {
     case 'index.php';
     $title = 'Natasha\'s Portal Page';
     $body = 'home';
+    $logo = 'fa-home';
     break;
 
     case 'big.php';
     $title = 'Big Project';
     $body = 'big inner';
+    $logo = 'fa-home';
     break;
 
     case 'aia.php';
     $title = 'AIA';
     $body = 'aia inner';
+    $logo = 'fa-universal-access';
     break;
 
     case 'flowchart.php';
     $title = 'Flowchart';
     $body = 'flowchart inner';
+    $logo = 'fa-home';
     break;
 
     case 'final.php';
     $title = 'Final Project';
     $body = 'final inner';
+    $logo = 'fa-home';
     break;
 
     case 'contactme.php';
     $title = 'Contact Natasha';
     $body = 'contact inner';
+    $logo = 'fa-paper-plane';
     break;
 
     case '.php';
     $title = '';
     $body = ' inner';
+    $logo = '';
     break;
 
     case '.php';
     $title = '';
     $body = ' inner';
+    $logo = '';
     break;
 }
 
