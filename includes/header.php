@@ -9,10 +9,18 @@
     <title><?php echo $title; ?></title>
     <link type="text/css" rel="stylesheet" href="css/styles.css">
     <link type="text/css" rel="stylesheet" href="css/forms.css">
+    <script src="https://use.fontawesome.com/fd82877a60.js"></script>
 
  </head>
+
     <body class="<?php echo $body; ?>">
-    <h1><?php echo $title; ?></h1>
+
+    <h1>
+      <i class="logo fa <?php echo $logo; ?>">
+      </i>
+         <?php echo $title; ?>
+    </h1>
+
       <header>
       
          <div class="topnav" id="myTopnav">

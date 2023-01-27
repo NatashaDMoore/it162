@@ -4,7 +4,7 @@
             <li>All Rights Reserved</li>
         </ul>
         <ul>
-            <li class="desktop">Copyright &copy; 2022</li>
+            <li class="desktop">Copyright &copy; <?=date('Y')?></li>
             <li class="desktop">All Rights Reserved</li>
             <li><a href="../index.php">Web Design by Natasha Moore</a></li>
             <li><a id="html-checker" href="#">HTML Validation</a></li>
