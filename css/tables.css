@@ -1,0 +1,76 @@
+/* Styles for Tables */
+
+
+table {
+    border:1px solid #000;
+    width:80%;
+    border-collapse: collapse;
+    margin:auto;
+    background-color:#fff;
+    font-size: 1em;
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.5em;
+}
+
+caption{
+    font-size: 1.5em;
+    margin: 1em;
+}
+
+tr {
+  vertical-align:top;
+}
+
+td {
+  border: 1px dotted #000;
+  padding: .5em;
+  color: #404040;
+  list-style:disc outside;
+}
+
+th {
+    border: 1px solid #000;
+    padding: .5em;
+    background-color: #e6e6e6;
+    color: #000;
+    font-weight: 500;
+    vertical-align: top;
+}
+
+th p {
+    font-weight: normal;
+    color: #404040;
+}
+
+table.client {
+    margin:40px auto; /* T R B L */
+}
+
+table.client th {
+    text-align: left;
+    width:30%;
+}
+
+table.audience {
+    margin:40px auto; /* T R B L */
+}
+
+table.audience th{
+    width:33.3%;
+}
+
+ul {
+    /* pulls bullets inside table */
+    padding-inline-start: 40px;
+}
+
+h3.aia {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+@media all and (max-width:736px) {
+    ul {
+        padding-inline-start: 20px;
+    }
+}

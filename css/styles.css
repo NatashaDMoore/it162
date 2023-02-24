@@ -1,10 +1,11 @@
 /* styles for my portal page */
 
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Barlow', sans-serif;
 }
 
 html, body {
@@ -14,6 +15,7 @@ html, body {
 
 body {
     min-height: 100%;
+    font-size: 1em;
 }
 
 #wrapper {
@@ -130,7 +132,7 @@ main p {
     padding: 10px;
     margin: 10px auto;
     color: rgb(31, 31, 31);
-    font-size: 1.05em;
+    font-size: 1.1em;
 }
 
 /* Page Specific Styles */
@@ -279,4 +281,5 @@ body.home footer {
     body.home footer {
         position: relative;
     }
+
 }
