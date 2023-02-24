@@ -11,11 +11,11 @@ include("./includes/header.php")
     <caption>Website Client</caption>
     <tr>
       <th scope="row">Client Name</th>
-      <td>Dan-Vy Le</td>
+      <td>Dan-Vy Le, teammate</td>
     </tr>
     <tr>
       <th scope="row">Website &frasl; Business Name</th>
-      <td>Seattle Women's Flag Football</td>
+      <td>Seattle Women's Flag Football (Seattle Parks and Rec.)</td>
     </tr>
     <tr>
       <th scope="row">Redesign or New Website?</th>
@@ -23,7 +23,7 @@ include("./includes/header.php")
     </tr>
     <tr>
       <th scope="row">Type of Website</th>
-      <td>Marketing, Informational</td>
+      <td>Marketing, Informational, Training, Community</td>
     </tr>
     <tr>
       <th scope="row">Goals of Website</th>
@@ -40,7 +40,7 @@ include("./includes/header.php")
       <th scope="col">Approach</th>
     </tr>
     <tr>
-      <th scope="row"><h3 class="aia">New player to league</h3><br><p>This person is anywhere from 18-60 years old. They are a woman who has played flag football in another league within Seattle or out of state. They are somewhat familiar with flag football rules but new to the community.</p></th>
+      <th scope="row"><p class="aia">New player to league</p><p>This person is anywhere from 18-60 years old. They are a woman who has played flag football in another league within Seattle or out of state. They are somewhat familiar with flag football rules but new to the community.</p></th>
       <td>
         <ul>
           <li>Price</li> 
@@ -64,7 +64,7 @@ include("./includes/header.php")
       </td>
     </tr>
     <tr>
-      <th scope="row"><h3 class="aia">Returning player</h3><br><p>This person is female and anywhere from 18-60 years old. They are familiar with the league and the rules. They have signed up before but may want information beyond the basics. They may want to become more involved in the community.</p></th>
+      <th scope="row"><p class="aia">Returning player</p><p>This person is female and anywhere from 18-60 years old. They are familiar with the league and the rules. They have signed up before but may want information beyond the basics. They may want to become more involved in the community.</p></th>
       <td>
         <ul>
           <li>Price</li> 
@@ -85,7 +85,7 @@ include("./includes/header.php")
       </td>
     </tr>
     <tr>
-      <th scope="row"><h3 class="aia">New player to flag football</h3><br><p>This person is a woman anywhere from 18-60. They are new to flag football and do not know the rules or the community. They will need help navigating sign up and how to play. They may be hesitant to ask questions.</p></th>
+      <th scope="row"><p class="aia">New player to flag football</p><p>This person is a woman anywhere from 18-60. They are new to flag football and do not know the rules or the community. They will need help navigating sign up and how to play. They may be hesitant to ask questions.</p></th>
       <td>
         <ul>
           <li>Price</li> 

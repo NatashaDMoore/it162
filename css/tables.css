@@ -33,6 +33,7 @@ th {
     padding: .5em;
     background-color: #e6e6e6;
     color: #000;
+    font-size: 1.1rem;
     font-weight: 500;
     vertical-align: top;
 }
@@ -64,9 +65,11 @@ ul {
     padding-inline-start: 40px;
 }
 
-h3.aia {
+p.aia {
+    color: #000;
     font-size: 1.1rem;
-    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 500;
 }
 
 @media all and (max-width:736px) {
