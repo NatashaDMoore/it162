@@ -12,9 +12,9 @@
     <link type="text/css" rel="stylesheet" href="css/tables.css">
     <script src="https://use.fontawesome.com/fd82877a60.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;1,100&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
- </head>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;1,100;1,300&family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+</head>
 
     <body class="<?php echo $body; ?>">
 
