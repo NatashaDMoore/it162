@@ -30,9 +30,9 @@ switch (THIS_PAGE) {
     $body = 'rulebook inner';
     break;
 
-    case '.php';
-    $title = '';
-    $body = ' inner';
+    case 'register.php';
+    $title = 'Sign Up';
+    $body = 'register inner';
     break;
 
     case '.php';
@@ -49,19 +49,30 @@ $nav = array(
     'index.php#faq' => 'FAQ',
     'index.php#mission' => 'Mission',
     'index.php#board' => 'Board Members',
-    'index.php#contact' => 'Contact'
+    'index.php#contact' => 'Contact',
+    '' => 'Players',
+    'register.php' => 'Sign Up'
 );
 
 function make_links($nav) {
-    $my_return = '';
-    foreach($nav as $key => $value) {
-    if(THIS_PAGE == $key) {
-        $my_return .= '<a class="current" href=" '.$key.' "> '.$value.' </a>';
-    } else {
-        $my_return .= '<a href=" '.$key.' "> '.$value.' </a>';
-    }
+	$my_return = '';
+	foreach($nav as $key => $value) {
+		if(THIS_PAGE == $key) {
+			$my_return .= '<a class="current" href=" '.$key.' "> '.$value.' </a>';
+		} elseif ($value == 'Players') {
+			$my_return .= '<div class="dropdown">';
+			$my_return .= '<a href="#">'.$value.'</a>';
+			$my_return .= '<div class="dropdown-content">';
+			$my_return .= '<a href="#">Schedule</a>';
+			$my_return .= '<a href="#">Standings</a>';
+			$my_return .= '<a href="#">Rule Book</a>';
+			$my_return .= '</div>';
+			$my_return .= '</div>';
+		} else {
+			$my_return .= '<a href=" '.$key.' "> '.$value.' </a>';
+		}
+	}
+	return $my_return;
 
-    } // end foreach
-
-    return $my_return;
 } // end function
+
