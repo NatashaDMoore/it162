@@ -4,37 +4,50 @@
 # General
 --------------------------------------------------------------*/
 
-* {
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Barlow', sans-serif;
-}
+  }
 
-html, body {
+  html, body {
     background-color: rgb(213, 212, 212);
     min-height: 100vh;
-}
+  }
 
-body {
+  body {
     min-height: 100%;
     font-size: 1em;
-}
+  }
 
-#wrapper {
+  .wrapper {
     min-height: 100%;
-}
+  }
 
-#wrapper:after {
+  .wrapper:after {
     content: "";
     display: block;
+  }
+
+  :root {
+    --blue: #2d405f;
+    --green: #47ce12;
+    --grey: #ededed;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Teko', sans-serif;
+  }
+
+  p {
+    font-family: 'Barlow', sans-serif;
   }
 
 /*--------------------------------------------------------------
 # Grid
 --------------------------------------------------------------*/
 
-.container {
+  .wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 20px;
@@ -87,49 +100,200 @@ body {
   .col-12 {
     grid-column: span 12;
   }
-  
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 
- /* Dropdown Button */
- .dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+  .logo {
+    grid-column: 2 / span 1;
+    line-height: 1;
+    font-weight: 500;
+    font-size: 2em;
   }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+
+  .logo a {
     text-decoration: none;
-    display: block;
+    color: var(--blue);
   }
+
+  header {
+    background: var(--grey);
+    border-bottom: #ffff 1px solid;
+    position: fixed;
+    text-align: center;
+    z-index: 999;
+    width: 100%;
+    padding: .75em 2em;
+  }
+
+  nav .nav-links a {
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    margin-left: 1em;
+    font-size: 1rem;
+    padding: 1em 0;
+    color: var(--blue);
+    text-transform: uppercase;
+  }
+
+  nav a.current {
+    color: var(--green);
+  }
+
+  nav a:hover{
+    color: var(--green);
+  }
+
+  /* Checkbox */
+  .nav-toggle {
+    display: none;
+    /* Allows for users to tab through */
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+  }
+
+  /* =============== Mobile =============== */
+
+  @media screen and (max-width: 1179px) {
+
+      nav {
+      position:absolute;
+      text-align: left;
+      top: 100%; /* 100% away from the top as measured by the header */
+      left: 0;
+      background: #ffffff;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      /* display: none; */
+      transform: scale(1, 0); /* (width, height) */
+      transform-origin: top; /* changes the transition from the top */
+      transition: transform 300ms ease-in-out; /* slides the menue open from the middle */
+    }
+
+    nav a {
+      display: block;
+      margin-right: 1em;
+      opacity: 0;
+      /* When not checked, will use this transition */
+      transition: opacity 150ms ease-in-out; /* Creates fade out effect when closing the menu */
+    }
+
+    .nav-toggle-label{
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 1em;
+      /* height and display flex allows for centering. Cannot align a block item */
+      height: 100%;
+      display:flex;
+      align-items: center;
+    }  
+
+    /* Checked will display menu */
+    .nav-toggle:checked ~ nav { /* "~" looks for child of nav-toggle */
+      display: block;
+      transform: scale(1, 1);
+    }
+
+    .nav-toggle:checked ~ nav a {
+      opacity: 1;
+      /* When checked, will use this transition */
+      transition: opacity 550ms ease-in-out 80ms; /* fades in menu items to prevent stretching 80ms delay */
+    }
+
+    header .icon {
+      color: var(--blue);
+      font-size: 28px;
+      cursor: pointer;
+      line-height: 0;
+    }
+
+    header .icon:hover {
+      color: var(--green);
+    }
+
+    /* Hides the "player" button */
+    .dropdown > a:first-child {
+      display: none;
+     }
+
+  }
+
+  /* =============== Desktop =============== */
+
+  @media screen and (min-width: 1180px) {
+    .nav-toggle-label {
+      display: none;
+    }
+
+    header {
+      display: grid;
+      align-items: center;
+    }
+
+    nav {
+      /* all: unset; This removes all previous styles for this element */
+      grid-column: 3 / 12;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    nav .nav-links {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav .nav-links a {
+      display: inline-block;
+      margin-left: 1.5em;
+      position: relative;
+      align-items: center;
+    }
+
+      /* Player dropdown content (Hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    nav .dropdown-content a {
+      color: var(--blue);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      margin: 0;
+    }
+    
+    .dropdown-content a:hover {
+      color: var(--green);
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: var(--green);
+    } 
+
+    /* Sign Up Link */
+    nav .nav-links a:nth-of-type(7) {
+      background: #ffff;
+      border-radius: 10px;
+      padding: 1em 1.1em;
+      margin-left: .5em;
+      color: #332fed;
+    }
+
+    nav .nav-links a:nth-of-type(7):hover {
+      color: #fff;
+      background: var(--green);
   
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
-  
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {background-color: #3e8e41;} 
+    }
+
+  }
