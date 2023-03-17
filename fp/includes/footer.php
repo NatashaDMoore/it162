@@ -1,7 +1,7 @@
         <footer>
                 <ul>
-                    <li class="desktop">Copyright &copy; <?=date('Y')?></li>
-                    <li class="desktop">All Rights Reserved</li>
+                    <li>&copy; Copyright <span class="brand">Seattle Women's Flag Football </span><?=date('Y')?></li>
+                    <li>All Rights Reserved</li>
                     <li><a href="../index.php">Web Design by Natasha Moore</a></li>
                     <li><a id="html-checker" href="#">HTML Validation</a></li>
                     <li><a id="css-checker" href="#">CSS Validation</a></li>
