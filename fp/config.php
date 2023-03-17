@@ -51,7 +51,7 @@ $nav = array(
     'index.php#board' => 'Board Members',
     'index.php#contact' => 'Contact',
     '' => 'Players',
-    'register.php' => 'Sign Up'
+    'https://forms.gle/EknUmCzKJfeKo2a36' => 'Sign Up'
 );
 
 function make_links($nav) {

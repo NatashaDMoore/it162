@@ -30,6 +30,11 @@
     display: block;
   }
 
+  section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+
   :root {
     --blue: #2d405f;
     --green: #47ce12;
@@ -275,11 +280,77 @@
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
-  div.hero {
-    display: grid;
+
+  .hero {
+    display: flex;
     grid-column: 1 / span 12;
-    height: 1000px;
-    background: var(--blue);
+    height: 100vh;
+    /* background: white; */
+    border-bottom: 2px solid white;
+    text-align: center;  
+    background-image: 
+      linear-gradient(to bottom, rgba(21, 21, 21, 0.461), rgba(0, 0, 0, 0.73)),
+      url("../img/players-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 4.5em;
+    line-height: 1em;
+    color: #fff;
+  }
+
+  .hero h2 {
+    font-size: 2em;
+    line-height: 2em;
+    color: var(--grey);
+    font-weight: 300;
+  }
+
+  .hero .btn {
+    font-family: var(--barlow);
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: block;
+    padding: 8px 32px 10px 32px;
+    margin: 25px auto 0 auto;
+    border-radius: 5px;
+    transition: 0.5s;
+    color: #fff;
+    background: #2dc41f;
+    width: fit-content;
+  }
+
+  .hero .btn:hover {
+    background: #0926a7;
+  }
+
+  @media (max-width: 860px) {
+    .hero {
+      max-height: 100vh;
+    }
+  
+    .hero h1 {
+      font-size: 40px;
+      line-height: 42px;
+      width: 100%;
+    }
+  
+    .hero h2 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+  }
+  
+  @media (max-height: 768px) {
+    .hero {
+      height: auto;
+    }
   }
 
 /*--------------------------------------------------------------

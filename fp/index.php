@@ -1,12 +1,19 @@
 <?php include('./includes/header.php');?>
 
-<main id="hero" class="hero">
+<section id="hero" class="hero">
 
-</main>
+    <div class="banner" data-aos="fade-up">
+    <h1>SEATTLE WOMEN'S FLAG FOOTBALL</h1>
+    <h2>Welcoming women of all skill levels!</h2>
+    <a href="#contact" class="btn">Join Us!</a>
+    <!-- <img src="assets/img/hero_wff.jpg" class="img-fluid hero-img" alt="" data-aos="zoom-in" data-aos-delay="150"> -->
+    </div>
+
+</section><!-- End Hero -->
 
 
 <div class="contact" id="contact">
-    <h2>Contact</h2></header>
+    <h2>Contact</h2>
     <?php
 
         include 'includes/contact_include.php'; #site keys & code here
